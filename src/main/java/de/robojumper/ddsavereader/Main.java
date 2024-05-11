@@ -30,6 +30,9 @@ public class Main {
             case "names":
                 ReadNames.main(restArgs);
                 break;
+            case "v2":
+                de.robojumper.ddsavereader.v2.ui.MainWindow.main(restArgs);
+                break;
             default:
                 System.err.println("Error: Unknown command " + args[0]);
                 System.err.println("Commands: decode, encode, sheets, names");

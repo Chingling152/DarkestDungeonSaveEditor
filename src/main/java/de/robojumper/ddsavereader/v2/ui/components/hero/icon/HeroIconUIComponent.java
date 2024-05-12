@@ -21,9 +21,13 @@ public class HeroIconUIComponent extends JPanel {
         this.initialize();
     }
 
+    private String getPath(){
+        return this.heroClass + "/" + this.heroClass + "_portrait_roster_" + this.colorVariant.toString() + ".png";
+    }
+
     private void initialize(){
         try {
-            BufferedImage image = ImageIO.read(Objects.requireNonNull(getClass().getResource("plague_doctor/plague_doctor_portrait_roster_0.png")));
+            BufferedImage image = ImageIO.read(Objects.requireNonNull(getClass().getResource(this.getPath())));
             JLabel picLabel = new JLabel(new ImageIcon(image));
             picLabel.setVisible(true);
             this.add(picLabel);

@@ -31,7 +31,7 @@ public class MainWindow {
         frame.setBounds(100, 100, 800, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle(BuildConfig.DISPLAY_NAME + "/" + BuildConfig.VERSION);
-        frame.add(new HeroIconUIComponent("test", 10));
+        frame.add(new HeroIconUIComponent("plague_doctor", 2));
         frame.setVisible(true);
     }
 }

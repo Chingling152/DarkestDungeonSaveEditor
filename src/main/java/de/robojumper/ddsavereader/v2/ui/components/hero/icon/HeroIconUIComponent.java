@@ -1,10 +1,10 @@
 package de.robojumper.ddsavereader.v2.ui.components.hero.icon;
 
 import javax.imageio.ImageIO;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
 import javax.swing.ImageIcon;
-import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Objects;
@@ -26,6 +26,7 @@ public class HeroIconUIComponent extends JPanel {
     }
 
     private void initialize(){
+        this.setLayout(new BoxLayout(this,BoxLayout.PAGE_AXIS));
         try {
             BufferedImage image = ImageIO.read(Objects.requireNonNull(getClass().getResource(this.getPath())));
             JLabel picLabel = new JLabel(new ImageIcon(image));
